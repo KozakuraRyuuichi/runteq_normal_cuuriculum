@@ -32,7 +32,7 @@ module RunteqNormal
       g.skip_routes true
       g.asstes false
       g.helper false
-      g.test_flamework false
+      g.test_framework false
     end
   end
 end
