@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_04_20_114029) do
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
-        t.string "last_name", null: false
+    t.string "last_name", null: false
     t.string "first_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
