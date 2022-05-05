@@ -9,4 +9,7 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   validates :last_name, :first_name, :email, presence: true
+
+  # ユーザー消したら投稿も消える
+  has_many :posts, dependent: :destroy
 end
