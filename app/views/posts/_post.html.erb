@@ -1,0 +1,25 @@
+<div class="col-sm-12 col-lg-4 mb-3">
+  <div id="board-id-<%= post.id %>">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">
+          <!--<%= link_to post.title, post_path(post) %>でもOK -->
+          <%= link_to post.title, post %>
+        </h4>
+        <!--他人の投稿であればブックマークボタンを表示 -->
+        <% if current_user.own?(post) %>
+          <%= render 'crud_menus', post: post %>
+        <!-- 自分の投稿であれば編集/削除ボタンを表示 -->
+        <% else %>
+          <%
+=begin%>
+ <%= render 'bookmark_area', board: board %> 
+<%
+=end%>
+        <% end %>
+        <!-- ここまで -->
+        <p class="card-text"><%= post.content%></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,8 +16,8 @@
           </a>
 
           <div class='dropdown-menu dropdown-menu-right'>
-            <a class='dropdown-item' href='#'>掲示板一覧</a>
-            <a class='dropdown-item' href='#'>掲示板作成</a>
+            <%= link_to '掲示板一覧', posts_path, class: "dropdown-item"%>
+            <%= link_to '掲示板作成', new_post_path, class: "dropdown-item"%>
           </div>
         </li>
 
@@ -30,10 +30,10 @@
             <%= image_tag 'sample.jpg', size: '40x40' %>
           </a>
           <div class='dropdown-menu dropdown-menu-right'>
-            <div class='dropdown-item'>らんてっく たろう</div>
+            <div class='dropdown-item'><%= "#{current_user.last_name} #{current_user.first_name}" %></div>
             <div class='dropdown-divider'></div>
             <%= link_to 'プロフィール', '#', class: 'dropdown-item' %>
-            <%= link_to 'ログアウト', logout_path, class:'dropdown-item', method: :delete %>
+            <%= link_to 'Logout', logout_path, class:'dropdown-item', method: :delete %>
           </div>
         </li>
       </ul>
