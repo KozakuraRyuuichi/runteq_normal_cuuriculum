@@ -54,6 +54,7 @@ RSpec.describe "Posts", type: :system do
 
       # 処理結果の確認
       expect(current_path).to eq(post_path(Post.find_by(title: 'edited_title'))), '投稿編集後に投稿詳細画面に遷移できていません'
+      # save_and_open_page
       expect(page).to have_content('edited_title'), '編集した投稿のタイトルが表示されていません'
       expect(page).to have_content('edited_content'), '編集した投稿の本文が表示されていません'
     end

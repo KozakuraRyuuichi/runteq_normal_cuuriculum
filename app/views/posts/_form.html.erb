@@ -1,0 +1,11 @@
+<%= form_with model: @post, local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title, class: "form-control" %> 
+  </div>
+  <div class="form-group">
+    <%= f.label :content, "Content" %>
+    <%= f.text_area :content, size: '10×200', class: "form-control" %> 
+  </div>
+  <%= f.submit class: "btn btn-primary" %> 
+<% end %>
