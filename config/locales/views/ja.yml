@@ -1,0 +1,45 @@
+ja:
+  default:
+    login: 'ログイン'
+    logout: 'ログアウト'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+  posts:
+    index:
+      title: '掲示板一覧'
+      fail: '掲示板がありません。'
+    new:
+      title: '掲示板作成'
+      register: '登録する'
+    create:
+      success: '掲示板を作成しました'
+      fail: '掲示板を作成できませんでした'
+    show:
+      title: '掲示板詳細'
+    edit:
+      title: '掲示板編集'
+      register: '更新する'
+    update:
+      success: '掲示板を更新しました'
+      fail: '掲示板を更新できませんでした'
+    destroy:
+      success: '掲示板を削除しました'
+    bookmarks:
+      title: 'ブックマーク一覧'
+      fail: 'ブックマーク中の掲示板がありません。'
+
