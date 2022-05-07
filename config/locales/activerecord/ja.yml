@@ -2,7 +2,7 @@ ja:
   activerecord:
     models: 
       user: 'ユーザー'
-      post: '投稿'
+      post: '掲示板'
     attributes:
       user:
         email: 'メールアドレス'

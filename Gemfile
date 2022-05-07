@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap', '~> 4.3.1'
-gem 'font-awesome-sass', '~> 5.11.2'
+gem 'font-awesome-sass', '~> 5.15.1'
 gem 'jquery-rails'
 gem 'sorcery', '0.14.0'
 gem 'rails-i18n', '~> 5.1'
