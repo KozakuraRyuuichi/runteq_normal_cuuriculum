@@ -1,0 +1,23 @@
+ja:
+  activerecord:
+    models: 
+      user: 'ユーザー'
+      post: '投稿'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        last_name: '性'
+        first_name: '名'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+      post:
+        title: 'タイトル'
+        contenrt: '本文'
+  attributes:
+    created_at: '作成時間'
+    updated_at: '更新時間'
+  helpers:
+    submit:
+      create: '登録する'
+      update: '更新する'
+
