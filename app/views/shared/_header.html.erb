@@ -12,11 +12,11 @@
       <ul class='navbar-nav ml-auto main-nav align-items-center'>
         <li class='nav-item dropdown dropdown-slide'>
           <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            掲示板
+            <%= Post.model_name.human %>
           </a>
 
           <div class='dropdown-menu dropdown-menu-right'>
-            <%= link_to '掲示板一覧', posts_path, class: "dropdown-item"%>
+            <%= link_to t('posts.index.title'), posts_path, class: "dropdown-item"%>
             <%= link_to '掲示板作成', new_post_path, class: "dropdown-item"%>
           </div>
         </li>
