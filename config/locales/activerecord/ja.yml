@@ -13,6 +13,7 @@ ja:
       post:
         title: 'タイトル'
         contenrt: '本文'
+        posts_image: 'サムネイル'
   attributes:
     created_at: '作成時間'
     updated_at: '更新時間'
