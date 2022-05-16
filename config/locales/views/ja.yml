@@ -2,6 +2,7 @@ ja:
   default:
     login: 'ログイン'
     logout: 'ログアウト'
+    post: '投稿'
   users:
     new:
       title: 'ユーザー登録'
