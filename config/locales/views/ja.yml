@@ -2,6 +2,10 @@ ja:
   default:
     login: 'ログイン'
     logout: 'ログアウト'
+    post: '投稿'
+    message:
+      created: 'コメントが作成されました'
+      not_created: 'コメント作成に失敗しました'
   users:
     new:
       title: 'ユーザー登録'
