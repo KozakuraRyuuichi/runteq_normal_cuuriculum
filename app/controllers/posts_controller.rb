@@ -32,9 +32,9 @@ class PostsController < ApplicationController
   def update
     @post = current_user.posts.find(params[:id])
     if @post.update(post_params)
-      redirect_to post_path(@post), success: t('.success')
+      redirect_to post_path(@post), success: t('default.message.updated', item: Post.model_name.human)
     else
-      flash.now[:danger] = t('.fail')
+      flash.now[:danger] = t('default.message.not_updated', item: Post.model_name.human)
       render 'edit'
     end
   end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
   def destroy
     @post = current_user.posts.find(params[:id])
     @post.destroy!
-    redirect_to posts_path, success: t('.success')
+    redirect_to posts_path, success: t('default.message.deleted', item: Post.model_name.human)
   end
 
   private
