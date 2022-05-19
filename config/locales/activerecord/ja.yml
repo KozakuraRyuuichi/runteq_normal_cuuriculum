@@ -2,7 +2,8 @@ ja:
   activerecord:
     models: 
       user: 'ユーザー'
-      post: '投稿'
+      post: '掲示板'
+      comment: 'コメント'
     attributes:
       user:
         email: 'メールアドレス'
@@ -13,6 +14,9 @@ ja:
       post:
         title: 'タイトル'
         contenrt: '本文'
+        posts_image: 'サムネイル'
+      comment:
+        body: 'コメント'
   attributes:
     created_at: '作成時間'
     updated_at: '更新時間'

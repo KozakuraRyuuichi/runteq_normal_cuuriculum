@@ -1,3 +1,4 @@
+<% content_for(:title, t('.title')) %>
 <div class="container pt-3">
   <%
 =begin%>
@@ -16,7 +17,7 @@
       <% if @posts.present? %>
         <%= render @posts %>
       <% else %>
-        <%= "投稿はありません" %>
+        <%= t('.fail') %>
       <% end %>
       </div>
     </div>
