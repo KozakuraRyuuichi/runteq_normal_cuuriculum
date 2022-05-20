@@ -14,8 +14,23 @@ class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   # ユーザー消したらコメントも消える
   has_many :comments, dependent: :destroy
+  # ユーザー消したらブックマーク消える
+  has_many :bookmarks, dependent: :destroy
+  has_many :bookmark_posts, through: :bookmarks, source: :post
 
   def own?(object)
     id == object.user_id
   end
+
+  def bookmark(post)
+    bookmark_posts << post
+  end
+
+  def unbookmark(post)
+    bookmark_posts.delete(post)
+  end
+
+  def bookmark?(post)
+    bookmark_posts.include?(post)
+    # Bookmark.where(user_id: id, post_id: post.id).exists?と同じ
 end
