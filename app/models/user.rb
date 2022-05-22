@@ -33,4 +33,5 @@ class User < ApplicationRecord
   def bookmark?(post)
     bookmark_posts.include?(post)
     # Bookmark.where(user_id: id, post_id: post.id).exists?と同じ
+  end
 end
