@@ -49,5 +49,12 @@ ja:
       success: '掲示板を削除しました'
     bookmarks:
       title: 'ブックマーク一覧'
-      fail: 'ブックマーク中の掲示板がありません。'
-
+      no_result: 'ブックマーク中の掲示板がありません。'
+  bookmarks:
+    create:
+      success: 'ブックマークしました'
+    destroy:
+      success: 'ブックマークを外しました'
+  profiles:
+    show:
+      title: 'プロフィール'
