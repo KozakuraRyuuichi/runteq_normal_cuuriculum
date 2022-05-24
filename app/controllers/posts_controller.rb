@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.includes(:user).order(created_at: :desc)
+    # @posts = Post.all.includes([:user, :bookmarks]).order(created_at: :desc)
   end
 
   def new
@@ -43,6 +44,11 @@ class PostsController < ApplicationController
     @post = current_user.posts.find(params[:id])
     @post.destroy!
     redirect_to posts_path, success: t('default.message.deleted', item: Post.model_name.human)
+  end
+
+
+  def bookmarks
+    @bookmark_posts =current_user.bookmark_posts.includes(:user).order(created_at: :desc)
   end
 
   private
