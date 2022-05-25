@@ -1,3 +1,7 @@
-<%= link_to bookmark_path(current_user.bookmarks.find_by(post_id: post.id)), id: "js-bookmark-button-for-post-#{post.id}", class:"float-right", method: :delete do %>
+<%= link_to bookmark_path(current_user.bookmarks.find_by(post_id: post.id)),
+            id: "js-bookmark-button-for-post-#{post.id}",
+            class:"float-right",
+            method: :delete, 
+            remote: true do %>
   <%= icon 'fas', 'star' %>
 <% end %>
