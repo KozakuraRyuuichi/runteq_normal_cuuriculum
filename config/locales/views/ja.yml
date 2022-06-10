@@ -9,7 +9,7 @@ ja:
       updated: "%{item}を更新しました"
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
-      delete_confirm: '削除しますか？'
+      delete_confirm: '削除しまするけどよか？'
   users:
     new:
       title: 'ユーザー登録'

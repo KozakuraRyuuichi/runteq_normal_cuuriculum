@@ -1,23 +1,13 @@
 class CommentsController < ApplicationController
   def create
-    # @post = Post.find(params[:post_id])
-    # @comment = @post.user.comments.build(comment_params)
-    # @comment.user_id = current_user.id
-    comment = current_user.comments.build(comment_params)
-    if comment.save
-      # redirect_to post_path(@post), success: t('.success')
-      redirect_to post_path(comment.post), success: t('default.message.created', item: Comment.model_name.human)
-    else
-      redirect_to post_path(comment.post), danger: t('default.message.not_created', item: Comment.model_name.human)
-    end
+    @comment = current_user.comments.build(comment_params)
+    @comment.save
   end
 
-  # def destroy
-  #   @post = Post.find(params[:post_id])
-  #   @comment = @post_id.comments.build(comment_params)
-  #   @comment.user_id = current_user.id
-  #   @comment.destroy!
-  # end
+  def destroy
+    @comment = current_user.comments.find(params[:id])
+    @comment.destroy!
+  end
 
   private
 
