@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # before_action :require_login, only: %i[new create edit update destroy]
 
   def index
-    @posts = Post.all.includes(:user).order(created_at: :desc)
+    @posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
     # @posts = Post.all.includes([:user, :bookmarks]).order(created_at: :desc)
   end
 
@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
 
   def bookmarks
-    @bookmark_posts =current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+    @bookmark_posts =current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   private
