@@ -3,6 +3,7 @@ ja:
     login: 'ログイン'
     logout: 'ログアウト'
     post: '投稿'
+    search_word: '検索ワード'
     message:
       created: 'コメントが作成されました'
       not_created: 'コメント作成に失敗しました'
